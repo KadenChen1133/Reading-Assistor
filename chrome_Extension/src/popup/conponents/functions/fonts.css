@@ -1,0 +1,92 @@
+
+.fonts-title {
+  color: #d7c7e6;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: 'Helvetica, Arial, sans-serif';
+}
+
+
+.fonts-selected {
+  display: block;
+  width: 70%;
+  margin: 0.5rem auto;
+  padding: 0.6rem 1rem;
+
+  cursor: pointer;
+  color: #d7c7e6;
+  background-color: #291041;
+  border: 2px solid #d7c7e6;
+  border-radius: 0.7rem;
+  font-size: 1rem;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+
+.fonts-selected:hover {
+  color: #291041;
+  background-color: #d7c7e6;
+  transform: scale(1.05); 
+}
+
+
+.fonts-selected:active {
+  color: #d7c7e6;
+  background-color: #291041;
+  border-color: #d7c7e6;
+  transform: scale(0.95); 
+}
+
+
+.fonts-list {
+  width: 70%;
+  margin-top: 0.5rem;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+
+  border: 1px solid #d7c7e6;
+  background-color: #291041;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 0.7rem;
+  z-index: 1000;
+
+  opacity: 0; 
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease; 
+  position: absolute; 
+  left: 50%; 
+  transform: translateX(-50%) translateY(-10px); 
+  visibility: hidden; 
+}
+
+.fonts-list.show {
+  opacity: 1; 
+  transform: translateY(0) translateX(-50%); 
+  visibility: visible; 
+}
+
+
+.fonts-list li {
+  padding: 0.6rem 1rem;
+  color: #d7c7e6;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.fonts-list li:hover {
+  background-color: #d7c7e6;
+  color: #291041;
+}
+
+
+nav.fonts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
